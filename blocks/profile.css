@@ -1,0 +1,19 @@
+.profile {
+  display: flex;
+  flex-direction: row;
+  width: 1280px;
+  height: 210px;
+}
+
+.profile_avatar {
+  width: 190px;
+  height: 190px;
+}
+
+.profile_heading {
+  margin: 0;
+}
+
+.profile_paragraph {
+  margin: 0;
+}
