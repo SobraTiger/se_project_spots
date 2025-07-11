@@ -23,20 +23,45 @@
         />
       </header>
       <main class="content">
-        <section class="profile">
+        <section class="profile page__section">
           <img
-            class="profile_avatar"
+            class="profile__avatar"
             src="./images/avatar.jpg"
             alt="Profile Picture"
           />
-          <div class="profile_text">
-            <h2 class="profile_heading">Bessie Coleman</h2>
-            <p class="profile_paragraph">Civil Aviator</p>
+          <div class="profile__column">
+            <h2 class="profile__name">Bessie Coleman</h2>
+            <p class="profile__description">Civil Aviator</p>
+            <button type="button" class="profile__edit-btn">
+              <img src="./images/Edit Icon.svg" alt="edit-icon" />Edit Profile
+            </button>
+          </div>
+          <div class="profile__button_div">
+            <button type="button" class="profile__button_div_btn">
+              <img
+                src="./images/Plus icon.svg"
+                alt="plus-icon"
+                class="profile__button_plus-icon_img"
+              />New Post
+            </button>
           </div>
         </section>
-        <section class="cards"></section>
+        <section class="cards page__section"></section>
+        <ul class="cards__list">
+          <li class="card">
+            <img
+              src="./images/1-photo-by-moritz-feldmann-from-pexels.jpg"
+              alt="Val Thorens"
+              class="card__image"
+            />
+            <div class="card__content">
+              <h2 class="card__title">Val Thorens</h2>
+              <button type="button" class="card__like-btn"></button>
+            </div>
+          </li>
+        </ul>
       </main>
-      <footer class="footer"></footer>
+      <footer class="footer page__section"></footer>
     </div>
   </body>
 </html>
