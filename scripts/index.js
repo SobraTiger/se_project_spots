@@ -43,6 +43,7 @@ const profileNewOpen = document.querySelector(".profile__add-btn");
 const profileNewModal = document.querySelector("#new-post-modal");
 const profileNewClose = document.querySelector("#new-post");
 
+const profileFormElement = profileEditModal.querySelector(".modal__form");
 const profileNameElement = document.querySelector(".profile__name");
 const profileDescriptionElement = document.querySelector(
   ".profile__description"
@@ -65,6 +66,16 @@ profileNewOpen.addEventListener("click", function () {
 profileNewClose.addEventListener("click", function () {
   profileNewModal.classList.remove("modal_is-opened");
 });
+
+function handleProfileFormSubmit(evt) {
+  evt.preventDefault();
+  profileNameElement.textContent = profileEditNameInput.value;
+  profileDescriptionElement.textContent = profileEditDescriptionInput.value;
+
+  profileEditModal.classList.remove("modal_is-opened");
+}
+
+profileFormElement.addEventListener("submit", handleProfileFormSubmit);
 
 initialCards.forEach(function (item) {
   console.log(item.name);
