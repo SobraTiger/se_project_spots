@@ -42,6 +42,13 @@ const profileEditDescriptionInput = profileEditModal.querySelector(
 const profileNewOpen = document.querySelector(".profile__add-btn");
 const profileNewModal = document.querySelector("#new-post-modal");
 const profileNewClose = document.querySelector("#new-post");
+const profileNewImageInput = profileNewModal.querySelector(
+  "#profile-image-input"
+);
+const profileNewCaptionInput = profileNewModal.querySelector(
+  "#profile-caption-input"
+);
+const postFormElement = profileNewModal.querySelector(".modal__form");
 
 const profileFormElement = profileEditModal.querySelector(".modal__form");
 const profileNameElement = document.querySelector(".profile__name");
@@ -76,6 +83,16 @@ function handleProfileFormSubmit(evt) {
 }
 
 profileFormElement.addEventListener("submit", handleProfileFormSubmit);
+
+function handleAddCardSubmit(evt) {
+  evt.preventDefault();
+  console.log(profileNewImageInput.value);
+  console.log(profileNewCaptionInput.value);
+
+  profileNewModal.classList.remove("modal_is-opened");
+}
+
+postFormElement.addEventListener("submit", handleAddCardSubmit);
 
 initialCards.forEach(function (item) {
   console.log(item.name);
